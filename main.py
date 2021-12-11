@@ -3,11 +3,13 @@ import pickle5 as pickle
 import re
 import contractions
 # source: https://discuss.streamlit.io/t/change-backgroud/5653/3
+
+backgroud_url = "https://media.istockphoto.com/photos/white-dotted-bright-colored-led-smd-screen-picture-id489304914?k=20&m=489304914&s=612x612&w=0&h=MFScQSoIeX5KF75gKJd7-wXtigjwnht9CNoZB0r46S8="
 st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9JcTeATbPUWrPrAhMtBQoyAtxHI9BKTSNvw&usqp=CAU")
+        background: url(backgroud_url)
     }
     </style>
     """,
