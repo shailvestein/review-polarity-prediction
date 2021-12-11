@@ -100,18 +100,12 @@ if submitted:
         
     # It will show polarity of review
     else:
-        positive_review = """
-        <style>
-        .reportview-container .main footer {color: green;}    
-        """
-        negative_review = """
-        <style>
-        .reportview-container .main footer {color: red;}    
-        """
+        positive_review = '<p style="font-family:Courier; color:Green; font-size: 20px;">Positive review</p>'
+        negative_review = '<p style="font-family:Courier; color:Red; font-size: 20px;">Negative review</p>'
         if polarity == 1:
-            st.markdown(positive_review, unsafe_allow_html=False)
+            st.markdown(positive_review, unsafe_allow_html=True)
         else:
-            st.markdown(negative_review, unsafe_allow_html=False)
+            st.markdown(negative_review, unsafe_allow_html=True)
 
             
 hide_footer_style = """
