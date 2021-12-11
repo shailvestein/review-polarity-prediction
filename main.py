@@ -4,12 +4,12 @@ import re
 import contractions
 # source: https://discuss.streamlit.io/t/change-backgroud/5653/3
 
-backgroud_url = "https://media.istockphoto.com/photos/media-news-concept-picture-id155394774?b=1&k=20&m=155394774&s=170667a&w=0&h=Sxxw-WaWCMaAKftQ2CdcjTWPKWRyPeiUC1StPjTlR3E="
+backgroud_url = "https://www.publicdomainpictures.net/pictures/260000/velka/degrade-texture-1-15294231389TA.jpg"
 st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://media.istockphoto.com/photos/media-news-concept-picture-id155394774?b=1&k=20&m=155394774&s=170667a&w=0&h=Sxxw-WaWCMaAKftQ2CdcjTWPKWRyPeiUC1StPjTlR3E=")
+        background: url(backgroud_url)
     }
     </style>
     """,
