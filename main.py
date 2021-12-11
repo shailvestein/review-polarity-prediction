@@ -63,36 +63,44 @@ def preprocess(row):
 
 # Below we are defining a streamlit webpage which will take user input and predict polarity of taken review
 
+# Loading SVM classifier model
 with open('./svm_classifier.pkl', 'rb') as model:
     classifier = pickle.load(model)
-    
+ 
+# Loading TF-IDF vectorizer, which converts text into vector
 with open('./vectorizer.pkl', 'rb') as vectorizer:
     tfidfvectorizer = pickle.load(vectorizer)
     
-    
+# Header of streamlit webpage   
 st.header("Review polarity prediction")
-#st.text("This is Deep-Learning based model,\nwhich translates english language input sentence to hindi language sentence.")
-#st.text("This translator has its limitations:\n1.   Number of words in input sentence should not be greater than 20 words.")
+st.text("This is Machine-Learning based model,\nIt tells whether or not given review is positive.")
 
 
 with st.form("input_form"):
-    # st.write("Enter your english sentence below")
-    review = st.text_input(label='Your review here')
+    # Taking input review here
+    review = st.text_input(label='Enter your review here')
 
-    # Every form must have a submit button.
+    # Predict polarity button
     submitted = st.form_submit_button("Predict Polarity")
 
+# preprocessing input review
 review = preprocess(review)
-st.text(review)
+
+# converting preprocessed review in vector
 vector = tfidfvectorizer.transform([review])
 
+# predicting polarity score of input review
 polarity = classifier.predict(vector)
 
+# Showing output ot user if polarity score is 1, it is positive review else negative review
 if submitted:
+    # If user dosen't enter any word/sentence and press predict polarity than show this message
     if review == '' or review == None:
         st.text(f"Please enter your review!")
+        
+    # It will show polarity of review
     else:
-        if polarity > 0.5:
+        if polarity == 1:
             st.text(f"Positive review")
         else:
             st.text(f"Negative review")
