@@ -126,8 +126,9 @@ if submitted:
             
 hide_footer_style = """
 <style>
-.reportview-container .main footer {visibility: hidden;}    
+.reportview-container .main footer {visibility: hidden; }    
 """
 st.markdown(hide_footer_style, unsafe_allow_html=True)
 
-st.markdown("Created by Shailesh", unsafe_allow_html=False)
+created_by = '<p style="text-align:center; ">Created by Shailesh</p>'
+st.markdown(created_by, unsafe_allow_html=True)
