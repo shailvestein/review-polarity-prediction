@@ -114,7 +114,7 @@ polarity = classifier.predict(vector)
 # Showing output ot user if polarity score is 1, it is positive review else negative review
 if submitted:
     # If user dosen't enter any word/sentence and press predict polarity than show this message
-    if review == '' or review == None:
+    if review == '' or review == 'write your review here':
         review_error = '<p style="color:Orange; text-align:center; background-color:Blue; font-size: 20px;">**Please enter your review!**</p>'
         st.markdown(review_error, unsafe_allow_html=True)
         
