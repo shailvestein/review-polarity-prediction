@@ -87,8 +87,9 @@ st.text("1.\tThis is Machine-Learning based model,\n\tuses support vector machin
 
 with st.form("input_form"):
     # Taking input review here
-    enter_review_here = '<p style="color:Black; font-size: 20px;">Enter your review here</p>'
-    review = st.text_input(label=enter_review_here)
+    enter_review_here = '<p style="color:Black; font-size: 20px;">Your review goes here</p>'
+    st.markdown(enter_review_here, unsafe_allow_html=True)
+    review = st.text_input(label='Enter your review here')
 
     # Predict polarity button
     submitted = st.form_submit_button("Predict Polarity")
