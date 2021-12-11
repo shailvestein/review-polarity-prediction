@@ -4,3 +4,6 @@ streamlit
 scikit-learn
 numpy
 pickle5
+contractions
+re
+
