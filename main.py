@@ -93,9 +93,9 @@ st.markdown(header_text_2, unsafe_allow_html=True)
 with st.form("input_form"):
     # Taking input review here
     # source: https://discuss.streamlit.io/t/change-font-size-and-font-color/12377/3
-    enter_review_here = '<p style="color:Black; font-size: 20px;">Your review goes here</p>'
-    st.markdown(enter_review_here, unsafe_allow_html=True)
-    review = st.text_input(label='', value='review')
+    # enter_review_here = '<p style="color:Black; font-size: 20px;">Your review goes here</p>'
+    # st.markdown(enter_review_here, unsafe_allow_html=True)
+    review = st.text_input(label='', value='your review goes here')
     st.markdown('')
     st.markdown('')
     # Predict polarity button
