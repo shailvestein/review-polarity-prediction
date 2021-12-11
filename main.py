@@ -22,7 +22,7 @@ with st.form("input_form"):
     review = st.text_input(label='Your review here')
 
     # Every form must have a submit button.
-    submitted = st.form_submit_button("Polarity")
+    submitted = st.form_submit_button("Predict Polarity")
 
 vector = tfidfvectorizer.transform([review])
 
@@ -33,9 +33,9 @@ if submitted:
         st.text(f"Please enter your review!")
     else:
         if polarity > 0.5:
-            st.text(f"You've give positive review")
+            st.text(f"Positive review")
         else:
-            st.text(f"You've give negative review")
+            st.text(f"Negative review")
 
             
 hide_footer_style = """
