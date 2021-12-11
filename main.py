@@ -84,8 +84,10 @@ with open('./vectorizer.pkl', 'rb') as vectorizer:
 # Header of streamlit webpage
 header_title = '<p style="color:Black; font-size: 50px;">Review polarity prediction</p>'
 st.markdown(header_title, unsafe_allow_html=True)
-header_text = '<p style="color:Black; font-size: 20px;">1.\tThis is Machine-Learning based model,\n\tuses support vector machine algorithm in backend to find polarity score.\n2.\tIt tells whether or not given product review is positive.</p>'
-st.markdown(header_text, unsafe_allow_html=True)
+header_text_1 = '<p style="color:Black; font-size: 20px;">1.  This is Machine-Learning based web-app, it uses support vector machine algorithm in backend to find polarity score.</p>'
+header_text_2 = '<p style="color:Black; font-size: 20px;">2.  It tells whether or not given product review is positive.</p>'
+st.markdown(header_text_1, unsafe_allow_html=True)
+st.markdown(header_text_2, unsafe_allow_html=True)
 
 
 with st.form("input_form"):
