@@ -81,8 +81,9 @@ with open('./svm_classifier.pkl', 'rb') as model:
 with open('./vectorizer.pkl', 'rb') as vectorizer:
     tfidfvectorizer = pickle.load(vectorizer)
     
-# Header of streamlit webpage   
-st.header("Review polarity prediction")
+# Header of streamlit webpage
+header = '<p style="color:Black; font-size: 50px;">Review polarity prediction</p>'
+st.header(header)
 st.text("1.\tThis is Machine-Learning based model,\n\tuses support vector machine algorithm in backend to find polarity score.\n2.\tIt tells whether or not given product review is positive.")
 
 
