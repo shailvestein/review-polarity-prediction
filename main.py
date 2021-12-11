@@ -89,7 +89,7 @@ with st.form("input_form"):
     # Taking input review here
     enter_review_here = '<p style="color:Black; font-size: 20px;">Your review goes here</p>'
     st.markdown(enter_review_here, unsafe_allow_html=True)
-    review = st.text_input()
+    review = st.text_input(label='')
 
     # Predict polarity button
     submitted = st.form_submit_button("Predict Polarity")
