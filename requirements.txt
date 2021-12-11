@@ -1,7 +1,6 @@
---upgrade pip
-scikit-learn
-numpy
-pickle
 altair
 pandas
 streamlit
+scikit-learn
+numpy
+pickle5
