@@ -136,5 +136,5 @@ hide_footer_style = """
 """
 st.markdown(hide_footer_style, unsafe_allow_html=True)
 
-created_by = '<p style="text-align:center; ">Created by Shailesh</p>'
+created_by = '<p style="text-align:center; color:Black">Created by Shailesh</p>'
 st.markdown(created_by, unsafe_allow_html=True)
