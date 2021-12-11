@@ -8,9 +8,9 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://www.publicdomainpictures.net/pictures/260000/velka/degrade-texture-1-15294231389TA.jpg");
-        opacity:0.9
+        background: url("https://www.publicdomainpictures.net/pictures/260000/velka/degrade-texture-1-15294231389TA.jpg")
     }
+    .reportview-container{opacity:0.2;}
     </style>
     """,
     unsafe_allow_html=True)
