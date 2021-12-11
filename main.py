@@ -9,7 +9,7 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url(backgroud_url)
+        background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fnew-world&psig=AOvVaw337ChGF-7AGxyE3J6YRulo&ust=1639327782756000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjRsoaa3PQCFQAAAAAdAAAAABAn")
     }
     </style>
     """,
