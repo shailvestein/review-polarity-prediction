@@ -4,12 +4,11 @@ import re
 import contractions
 # source: https://discuss.streamlit.io/t/change-backgroud/5653/3
 
-backgroud_url = "https://www.publicdomainpictures.net/pictures/260000/velka/degrade-texture-1-15294231389TA.jpg"
 st.markdown(
     """
     <style>
     .reportview-container {
-        background: url(backgroud_url)
+        background: url("https://www.publicdomainpictures.net/pictures/260000/velka/degrade-texture-1-15294231389TA.jpg")
     }
     </style>
     """,
