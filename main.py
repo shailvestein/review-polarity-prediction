@@ -82,10 +82,10 @@ with open('./vectorizer.pkl', 'rb') as vectorizer:
     tfidfvectorizer = pickle.load(vectorizer)
     
 # Header of streamlit webpage
-header_title = '<p style="color:Black; font-size: 50px;">Review polarity prediction</p>'
+header_title = '<p style="color:Black; font-size: 50px;">Review analysis</p>'
 st.markdown(header_title, unsafe_allow_html=True)
-header_text_1 = '<p style="color:Black; font-size: 20px;">1.  This is Machine-Learning based web-app, it uses support vector machine algorithm in backend to find polarity score.</p>'
-header_text_2 = '<p style="color:Black; font-size: 20px;">2.  It tells whether or not given product review is positive.</p>'
+header_text_1 = '<p style="color:Black; font-size: 20px;">1.  This is Machine-Learning based web-app, it uses support-vector-machine algorithm in backend to find polarity score.</p>'
+header_text_2 = '<p style="color:Black; font-size: 20px;">2.  It tells whether or not given product review is good.</p>'
 st.markdown(header_text_1, unsafe_allow_html=True)
 st.markdown(header_text_2, unsafe_allow_html=True)
 
@@ -121,8 +121,8 @@ if submitted:
     else:
         #positive_review = '<p style="color:Green; text-align:center; font-size: 20px;">Positive review</p>'
         #negative_review = '<p style="color:Red; text-align:center; font-size: 20px;">Negative review</p>'
-        positive_review = '<p style="color:White; text-align:center; background-color:Green; font-size: 20px;">Positive review</p>'
-        negative_review = '<p style="color:White; text-align:center; background-color:Red; font-size: 20px;">Negative review</p>'
+        positive_review = '<p style="color:White; text-align:center; background-color:Green; font-size: 20px;">Good review</p>'
+        negative_review = '<p style="color:White; text-align:center; background-color:Red; font-size: 20px;">Bad review</p>'
         
         if polarity == 1:
             st.markdown(positive_review, unsafe_allow_html=True)
