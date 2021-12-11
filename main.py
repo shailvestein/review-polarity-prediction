@@ -90,7 +90,7 @@ with st.form("input_form"):
     enter_review_here = '<p style="color:Black; font-size: 20px;">Your review goes here</p>'
     st.markdown(enter_review_here, unsafe_allow_html=True)
     review = st.text_input(label='')
-
+    st.markdown('')
     # Predict polarity button
     submitted = st.form_submit_button("Predict Polarity")
 
@@ -107,7 +107,8 @@ polarity = classifier.predict(vector)
 if submitted:
     # If user dosen't enter any word/sentence and press predict polarity than show this message
     if review == '' or review == None:
-        st.text(f"Please enter your review!")
+        review_error = '<p style="color:Orange; font-size: 20px;">**Please enter your review!**</p>'
+        st.markdown(review_error, unsafe_allow_html=True)
         
     # It will show polarity of review
     else:
