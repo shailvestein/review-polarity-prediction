@@ -101,9 +101,9 @@ if submitted:
     # It will show polarity of review
     else:
         if polarity == 1:
-            st.markdown(<*font color=‘green’>Positive review</*font>, unsafe_allow_html=True)
+            st.markdown(<font color=‘green’>Positive review</font>, unsafe_allow_html=True)
         else:
-            st.markdown(<*font color=‘red’>Negative review</*font>, unsafe_allow_html=True)
+            st.markdown(<font color=‘red’>Negative review</font>, unsafe_allow_html=True)
 
             
 hide_footer_style = """
