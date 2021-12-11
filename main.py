@@ -73,7 +73,7 @@ with open('./vectorizer.pkl', 'rb') as vectorizer:
     
 # Header of streamlit webpage   
 st.header("Review polarity prediction")
-st.text("1.\tThis is Machine-Learning based model,\n\tuses support vector machine algorithm in backend to find polarity score.\n2.\tIt tells whether or not given review is positive.")
+st.text("1.\tThis is Machine-Learning based model,\n\tuses support vector machine algorithm in backend to find polarity score.\n2.\tIt tells whether or not given product review is positive.")
 
 
 with st.form("input_form"):
