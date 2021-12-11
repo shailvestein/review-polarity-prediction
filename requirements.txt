@@ -1,5 +1,7 @@
-'/home/appuser/venv/bin/python -m pip install --upgrade pip'
+--upgrade pip
 scikit-learn
-pandas
 numpy
 pickle
+altair
+pandas
+streamlit
