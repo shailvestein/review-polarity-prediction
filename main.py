@@ -3,6 +3,15 @@ import pickle5 as pickle
 import re
 import contractions
 
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://img.freepik.com/free-vector/abstract-colorful-wave-transparent-stylish-background_1055-6965.jpg?size=338&ext=jpg")
+    }
+    </style>
+    """,
+    unsafe_allow_html=True)
 
 ##############################################################################################
 ##################                      Preprocessing               ##########################
