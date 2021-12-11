@@ -2,7 +2,7 @@ import streamlit as st
 import pickle5 as pickle
 import re
 import contractions
-
+# source: https://discuss.streamlit.io/t/change-backgroud/5653/3
 st.markdown(
     """
     <style>
@@ -87,7 +87,8 @@ st.text("1.\tThis is Machine-Learning based model,\n\tuses support vector machin
 
 with st.form("input_form"):
     # Taking input review here
-    enter_review_here = '<p style="color:Black; font-size: 20px;">Your review goes here</p>'
+    # source: https://discuss.streamlit.io/t/change-font-size-and-font-color/12377/3
+    enter_review_here = '<p style="color:Black; background-color:Blue; font-size: 20px;">Your review goes here</p>'
     st.markdown(enter_review_here, unsafe_allow_html=True)
     review = st.text_input(label='')
     st.markdown('')
