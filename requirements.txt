@@ -1,7 +1,6 @@
 altair
-pandas
 streamlit
-scikit-learn==0.24.1
+scikit-learn
 numpy
 pickle5
 contractions
