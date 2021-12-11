@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle5 as pickle
+from data_preprocessor import preprocess
 
+##############################################################################################
 ##############################################################################################
 
 # Below we are defining a streamlit webpage which will take user input and predict polarity of taken review
@@ -24,6 +26,8 @@ with st.form("input_form"):
     # Every form must have a submit button.
     submitted = st.form_submit_button("Predict Polarity")
 
+review = preprocess(review)
+st.text(review)
 vector = tfidfvectorizer.transform([review])
 
 polarity = classifier.predict(vector)
