@@ -109,9 +109,9 @@ if submitted:
         .reportview-container .main footer {color: red;}    
         """
         if polarity == 1:
-            st.markdown(positive_review, unsafe_allow_html=True)
+            st.markdown(positive_review, unsafe_allow_html=False)
         else:
-            st.markdown(negative_review, unsafe_allow_html=True)
+            st.markdown(negative_review, unsafe_allow_html=False)
 
             
 hide_footer_style = """
