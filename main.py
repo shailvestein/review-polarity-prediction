@@ -101,9 +101,9 @@ if submitted:
     # It will show polarity of review
     else:
         if polarity == 1:
-            st.text(<p style="color:green">Positive review</p>)
+            st.markdown(<p style="color:green">Positive review</p>)
         else:
-            st.text(<p style="color:red">Negative review</p>)
+            st.markdown(<p style="color:red">Negative review</p>)
 
             
 hide_footer_style = """
