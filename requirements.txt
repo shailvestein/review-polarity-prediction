@@ -1,6 +1,5 @@
+'/home/appuser/venv/bin/python -m pip install --upgrade pip'
 scikit-learn
 pandas
 numpy
-tqdm
-contractions
 pickle
