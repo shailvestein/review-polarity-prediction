@@ -1,36 +1,41 @@
 import streamlit as st
+import pickle
 
-#############################################################################################
-#############################################################################################
-
-
-##############################################################################################
 ##############################################################################################
 
 # Below we are defining a streamlit webpage which will take user input and predict polarity of taken review
 
-st.header("English-Hindi translator")
-st.text("This is Deep-Learning based model,\nwhich translates english language input sentence to hindi language sentence.")
-st.text("This translator has its limitations:\n1.   Number of words in input sentence should not be greater than 20 words.")
+with open('./svm_classifier.pkl', 'rb') as model:
+    classifier = pickle.load(model)
+    
+with open('./vectorizer.pkl', 'rb') as vectorizer:
+    tfidfvectorizer = pickle.load(vectorizer)
+    
+    
+st.header("Review polarity prediction")
+#st.text("This is Deep-Learning based model,\nwhich translates english language input sentence to hindi language sentence.")
+#st.text("This translator has its limitations:\n1.   Number of words in input sentence should not be greater than 20 words.")
 
 
 with st.form("input_form"):
     # st.write("Enter your english sentence below")
-    review = st.text_input(label='Please enter your english sentence below')
+    review = st.text_input(label='Your review here')
 
     # Every form must have a submit button.
-    submitted = st.form_submit_button("Translate")
+    submitted = st.form_submit_button("Polarity")
 
-if len(review.split(' ')) > 20:
-    st.text('Your input sentence has more than 20 words, please see its limitations')
-    # translated_sentence = predict(review)
+vector = tfidfvectorizer.transform([review])
 
-else:
-    if submitted:
-        if review == '' or review == None:
-            st.text(f"Please enter your english sentence below and press translate!")
+polarity = classifier.predict(vector)
+
+if submitted:
+    if review == '' or review == None:
+        st.text(f"Please enter your review!")
+    else:
+        if polarity > 0.5:
+            st.text(f"You've give positive review")
         else:
-            st.text(f"Your translated sentece will be shown here")
+            st.text(f"You've give negative review")
 
             
 hide_footer_style = """
@@ -38,10 +43,5 @@ hide_footer_style = """
 .reportview-container .main footer {visibility: hidden;}    
 """
 st.markdown(hide_footer_style, unsafe_allow_html=True)
-
-copyright = """
-<style>
-.reportview-container .main footer {visibility: show;}    
-"""
 
 st.markdown("Created by Shailesh", unsafe_allow_html=False)
