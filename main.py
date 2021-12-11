@@ -113,8 +113,11 @@ if submitted:
         
     # It will show polarity of review
     else:
-        positive_review = '<p style="color:Green; font-size: 20px;">Positive review</p>'
-        negative_review = '<p style="color:Red; font-size: 20px;">Negative review</p>'
+        #positive_review = '<p style="color:Green; font-size: 20px;">Positive review</p>'
+        #negative_review = '<p style="color:Red; font-size: 20px;">Negative review</p>'
+        positive_review = '<p style="color:White; background-color:Green; font-size: 20px;">Positive review</p>'
+        negative_review = '<p style="color:White; background-color:Red; font-size: 20px;">Negative review</p>'
+        
         if polarity == 1:
             st.markdown(positive_review, unsafe_allow_html=True)
         else:
