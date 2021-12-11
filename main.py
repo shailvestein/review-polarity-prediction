@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://img.freepik.com/free-vector/abstract-colorful-wave-transparent-stylish-background_1055-6965.jpg?size=338&ext=jpg")
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9JcTeATbPUWrPrAhMtBQoyAtxHI9BKTSNvw&usqp=CAU")
     }
     </style>
     """,
