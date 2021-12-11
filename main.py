@@ -82,9 +82,10 @@ with open('./vectorizer.pkl', 'rb') as vectorizer:
     tfidfvectorizer = pickle.load(vectorizer)
     
 # Header of streamlit webpage
-header = '<p style="color:Black; font-size: 50px;">Review polarity prediction</p>'
-st.markdown(header, unsafe_allow_html=True)
-st.text("1.\tThis is Machine-Learning based model,\n\tuses support vector machine algorithm in backend to find polarity score.\n2.\tIt tells whether or not given product review is positive.")
+header_title = '<p style="color:Black; font-size: 50px;">Review polarity prediction</p>'
+st.markdown(header_title, unsafe_allow_html=True)
+header_text = '<p style="color:Black; font-size: 20px;">1.\tThis is Machine-Learning based model,\n\tuses support vector machine algorithm in backend to find polarity score.\n2.\tIt tells whether or not given product review is positive.</p>'
+st.markdown(header_text, unsafe_allow_html=True)
 
 
 with st.form("input_form"):
