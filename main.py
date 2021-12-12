@@ -82,7 +82,7 @@ with open('./vectorizer.pkl', 'rb') as vectorizer:
     tfidfvectorizer = pickle.load(vectorizer)
     
 # Header of streamlit webpage
-header_title = '<p style="color:Black; font-size: 50px;">Review analysis</p>'
+header_title = '<p style="color:Black; font-size: 50px;">Sentiment analysis</p>'
 st.markdown(header_title, unsafe_allow_html=True)
 # header_text_1 = '<p style="color:Black; font-size: 20px;">1.  This is AI based web-app, it uses support-vector-machine algorithm in backend to find polarity score.</p>'
 header_text_1 = '<p style="color:Black; font-size: 20px;">1.  This is AI based web-app.</p>'
